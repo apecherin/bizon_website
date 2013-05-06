@@ -1,0 +1,32 @@
+.team
+  %h2 Team
+  %ul.thumbnails
+    - @users.each do |user|
+      %li.span2
+        %a.thumbnail{:href => '#', :style => 'text-align: center; cursor: pointer; text-decoration: none; min-height: 250px', 'data-id' => "#{user.id}"}
+          %img{:alt => "#{user.firstname} #{user.lastname}", :src => "#{user.avatar.thumb.url}", :style => 'height: 190px'}
+          %h4{:style => 'color: black'}
+            = "#{user.firstname} #{user.lastname}"
+
+#myModal.modal.hide.fade{'aria-hidden' => 'true', 'aria-labelledby' => 'myModalLabel', :role => 'dialog', :tabindex => '-1'}
+  .modal-header
+    %button.close{'aria-hidden' => 'true', 'data-dismiss' => 'modal', :type => 'button'} ×
+    %h3#myModalLabel.user-info
+  .modal-body
+    %p.dev_img
+      %img#image.user-info
+    %p
+      %h4
+        #user_name{:style => 'color: black'}
+        #role{:style => 'color: black'}
+    %p
+      %strong Description:
+    %p#description.user-info
+    %p
+      %strong oDesk Link:
+      %a#url.user-info{:target => '_blank'}
+    %p
+      %strong Portfolios:
+      %ul#portfolios.user-info
+  .modal-footer
+    %button.btn.btn-primary{'aria-hidden' => 'true', 'data-dismiss' => 'modal'} Close

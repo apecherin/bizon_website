@@ -1,0 +1,28 @@
+.portfolio
+  %h2 Portfolio
+  %ul.thumbnails
+    - @portfolios.each do |portfolio|
+      %li.span4
+        %a.thumbnail{:href => '#', :style => 'text-align: center; cursor: pointer; text-decoration: none; min-height: 290px', 'data-id' => "#{portfolio.id}"}
+          %img{:alt => "#{portfolio.name}", :src => "#{portfolio.image.thumb.url}", :style => 'height: 190px'}
+          %h3{:style => 'color: black'}
+            = portfolio.name
+
+#myModal.modal.hide.fade{'aria-hidden' => 'true', 'aria-labelledby' => 'myModalLabel', :role => 'dialog', :tabindex => '-1'}
+  .modal-header
+    %button.close{'aria-hidden' => 'true', 'data-dismiss' => 'modal', :type => 'button'} ×
+    %h3#myModalLabel.portfolio-info
+  .modal-body
+    %p
+      %img#image.portfolio-info
+    %p
+      %strong Description:
+    %p#description.portfolio-info
+    %p
+      %strong URL:
+      %a#url.portfolio-info{:target => '_blank'}
+    %p
+      %strong Developers:
+      %ul#developers.portfolio-info
+  .modal-footer
+    %button.btn.btn-primary{'aria-hidden' => 'true', 'data-dismiss' => 'modal'} Close

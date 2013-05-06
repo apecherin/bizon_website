@@ -1,0 +1,43 @@
+.span3
+  .description
+    %p{:style => 'margin-top: 70px'}
+      We are experienced in
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/Ruby_on_Rails', :target => '_blank'} Ruby on Rails
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/PHP', :target => '_blank'} PHP
+      = succeed ' /' do
+        %a{:href => 'http://en.wikipedia.org/wiki/JavaScript', :target => '_blank'} JavaScript
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/CoffeeScript', :target => '_blank'} CoffeeScript
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/MySQL', :target => '_blank'} MySQL
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/MongoDB', :target => '_blank'} MongoDB
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/PostgreSQL', :target => '_blank'} PostgreSQL
+      = succeed ',' do
+        %a{:href => 'http://kohanaframework.org/', :target => '_blank'} Kohana
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/CodeIgniter', :target => '_blank'} CodeIgniter
+      = succeed ',' do
+        %a{:href => 'http://en.wikipedia.org/wiki/Zend_Framework', :target => '_blank'} Zend Framework
+      = succeed '.' do
+        %a{:href => 'http://en.wikipedia.org/wiki/Symfony', :target => '_blank'} Symfony
+    %p
+      We have worked in almost every facet of web developing, from blogs to social networks. From the beginning, we have remained punctual, communicative, and cooperative with every client we have worked with.
+    %p
+      We make developing our passion, and that is reflected in the final result. Feel free to contact we for any reason.
+.span9
+  #myCarousel.carousel.slide
+    .carousel-inner
+      .active.item
+        %img{:alt => '', :src => 'images/ruby-on-rails.jpg'}
+      .item
+        %img{:alt => '', :src => 'images/php.jpeg'}
+      .item
+        %img{:alt => '', :src => 'images/mysql.jpg'}
+      .item
+        %img{:alt => '', :src => 'images/mongo_db.jpg'}
+    %a.carousel-control.left{'data-slide' => 'prev', :href => '#myCarousel'} ‹
+    %a.carousel-control.right{'data-slide' => 'next', :href => '#myCarousel'} ›
