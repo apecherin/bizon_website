@@ -8,10 +8,11 @@ class User < ActiveRecord::Base
 
   validates :firstname, presence: true
   validates :lastname, presence: true
-  validates :odesk_link, presence: true
 
   has_many :portfolio_users
   has_many :portfolios, through: :portfolio_users
+  has_many :blogs
+  has_many :comments, dependent: :destroy
 
   def custom_label_method
     "#{self.firstname} #{self.lastname}"

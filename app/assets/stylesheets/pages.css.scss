@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  background-color: rgb(202, 233, 255);
+  background-color: rgb(255, 255, 255);
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -86,4 +86,113 @@ code {
 
 #user_name {
   margin-left: 40%;
+}
+
+/* comments */
+
+.comments {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+#inline {
+  display: none;
+  width: 600px;
+}
+
+.row-fluid {
+  .span8{
+    background-color: rgb(245, 245, 245);
+    margin-top: 10px;
+    padding: 10px 10px 10px 40px;
+    border-color: #e8e8e8;
+    border-style: double;
+    border-bottom-width: 1px;
+  }
+}
+
+.row-fluid {
+  .span8{
+    .btltl{
+      padding: 10px 10px 10px 0px;
+      color: rgb(64, 70, 1);
+      font: 18px/100% Arial, Helvetica, sans-serif;
+    }
+  }
+}
+
+a#vverh {
+  display: none;
+  position: fixed;
+  margin-left: -104%;
+  margin-left: -webkit-calc(-100% - 7em);
+  margin-left: calc(-100% - 2.5em);
+  padding: 100% 1% 15% 99%;
+  bottom: 0;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #bbb;
+  \-webkit-transition: 1s;
+  transition: 1s;
+}
+a#vverh:before {
+  position: absolute;
+  content: asset-url("arrow.ico", image);
+  margin: -55px 0 0 -15px;
+}
+a#vverh:hover {
+  color: #000;
+  background-color: rgba(0,0,0,.3);
+}
+
+.leftavatblog {
+  float:left;
+  border-radius: 5px 5px 5px 5px;
+  margin: 7px 7px 7px 7px;
+}
+
+.rightavatblog {
+  float:right;
+  border-radius: 10px 10px 10px 10px;
+  margin: 14px 14px 14px 14px;
+}
+.btn.btn-li{
+  float:right;
+  margin: 7px 7px 7px 7px;
+}
+a.btn {
+  color: white !important;
+}
+a.btn:hover {
+  color: black !important;
+}
+a{
+  background: none;
+}
+.timestamp {
+  color: rgb(32, 7, 149);
+  font-style: italic
+}
+#curusr{
+  float:right;
+  margin: 12px 0px 0px 0px
 }

@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'mysql2'
+gem 'will_paginate', '3.0.4'
 gem 'haml-rails'
 gem 'rails_admin'
+gem 'fancybox-rails'
 gem 'carrierwave'
 gem 'rails_admin_jcrop'
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -32,5 +35,5 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem "tire"
 gem "devise"

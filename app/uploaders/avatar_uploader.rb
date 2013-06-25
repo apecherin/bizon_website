@@ -14,7 +14,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   version :thumb do
     process :rails_admin_crop
-    process :resize_to_fill => [290,360]
+    process :resize_to_fill => [180,180]
+  end
+
+  version :small_thumb, :from_version => :thumb do
+    process resize_to_fill: [160, 160]
   end
 
   def extension_white_list

@@ -1,0 +1,42 @@
+%p#notice= notice
+%img.rightavatblog{:alt => @blog.title, :src => @blog.avatar.url}/
+%span.btltl
+  Created at:
+  = @blog.created_at
+%p
+  %b Title:
+  = @blog.title
+%p
+  %b Post:
+  = @blog.post
+%p
+  %b User:
+  = "#{@blog.user.firstname} #{@blog.user.lastname}"
+.span8
+  %a#vverh{:href => "#"} Up
+  - if current_user
+    %a.btn.btn-success{"data-toggle" => "modal", :href => "#newComment", :role => "button"} Add a new comment
+  - if @blog.comments.any?
+    %h3
+      Comments (#{@blog.comments.count})
+    %ol.comments
+      = render @comments
+    = will_paginate @comments
+- if this_is_admin?
+  = link_to 'Edit', edit_blog_path(@blog),:class=>"btn btn-warning"
+  \|
+= link_to 'Back', blogs_path,:class=>"btn btn-inverse"
+
+#newComment.modal.hide.fade{'aria-hidden' => 'true', 'aria-labelledby' => 'myModalLabel', :role => 'dialog', :tabindex => '-1'}
+  .modal-header
+    %button.close{'aria-hidden' => 'true', 'data-dismiss' => 'modal', :type => 'button'} ×
+    %h3#myModalLabel.portfolio-info
+  .modal-body
+    %h2 New comment
+    %input#blog_id{:type => "hidden", :value => @blog.id}
+    #contact
+      %label{:for => "msg"} Enter your message
+      %textarea#msg.txtarea{:name => "msg"}
+      %button#send.btn.btn-success{'aria-hidden' => 'true', 'data-dismiss' => 'modal'} Send
+  .modal-footer
+    %button.btn{'aria-hidden' => 'true', 'data-dismiss' => 'modal'} Close

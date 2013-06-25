@@ -1,0 +1,32 @@
+.container-fluid
+  .row-fluid
+    .span3
+      - if this_is_admin?
+        = link_to 'New Blog', new_blog_path, :class => "btn btn-primary"
+      %h2 Searching
+      %input#myTypeahead.ajax-typeahead{"data-provide" => "typeahead", :type => "text"}/
+    .span9
+      %h2 Our posts:
+      - @blogs.each do |blog|
+        .span8
+          %a#vverh{:href => "#"} Up
+          %img.leftavatblog{ :alt => blog.title, :src => blog.avatar.small_thumb.url}
+          %span.btltl= blog.title
+          %br
+          %span.bdt= blog.created_at
+          %br
+          - tr_link = truncate(blog.post, :length => 350, :separator => ' ', :omission => '...');
+          %p
+            = tr_link
+            - if blog.post.to_s.length > 350
+              = link_to 'read more', blog
+          %span.busr
+            Author:
+            = "#{blog.user.firstname} #{blog.user.lastname}"
+          %br
+          %span.pcntcmm= blog.comments.count
+          %br
+          %p= link_to 'Show', blog, :class => "btn btn-info"
+          - if this_is_admin?
+            %p= link_to "Edit", edit_blog_path(blog), :class => "btn btn-warning"
+            %p= link_to "Destroy",  blog, :class => "btn btn-danger", :method => :delete, :data => { :confirm => 'Are you sure?' }

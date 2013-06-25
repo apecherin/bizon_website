@@ -26,11 +26,18 @@
               %span.icon-bar
               %span.icon-bar
             =link_to "BizonApps", root_path, :class=>"brand"
+            - if user_signed_in?
+              = link_to 'Sign out', destroy_user_session_path, :method => :delete, :class=>"btn btn-li btn-danger"
+              #curusr
+                Current user:
+                = (!current_user.nil?) ? link_to("#{current_user.firstname}", edit_user_registration_path) : "Guest"
+            - else
+              = link_to 'Sign in', new_user_session_path, :class=>"btn btn-li btn-primary"
             .container.nav-collapse
               %ul.nav
                 %li= link_to "Portfolio", portfolio_path
                 %li= link_to "Team", team_path
-                %li= link_to "Blog", blog_path
+                %li= link_to "Blog", blogs_path
 
       .container-fluid
         = yield

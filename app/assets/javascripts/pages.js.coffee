@@ -5,6 +5,11 @@
 index =
   init: ->
     @slider()
+    if document.getElementById("vverh")?
+      vverh = ->
+        document.getElementById("vverh").style.display = (if window.pageYOffset > "400" then "block" else "none")
+      vverh()
+      setInterval vverh, 1
 
   slider: ->
     $('.carousel').carousel
@@ -13,10 +18,12 @@ index =
 
 portfolio =
   init: ->
+    console.log('2')
     do @modalInit
 
   modalInit: ->
     $('.portfolio .thumbnail').click (e) ->
+      console.log('3')
       e.preventDefault()
       portfolio.getInfo($(@).data('id'))
 
@@ -69,3 +76,4 @@ $ ->
   index.init()
   portfolio.init()
   team.init()
+  console.log('1')
