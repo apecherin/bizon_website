@@ -166,13 +166,17 @@ a#vverh:hover {
 
 .leftavatblog {
   float:left;
-  border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   margin: 7px 7px 7px 7px;
 }
 
 .rightavatblog {
   float:right;
-  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   margin: 14px 14px 14px 14px;
 }
 .btn.btn-li{
@@ -195,4 +199,31 @@ a{
 #curusr{
   float:right;
   margin: 12px 0px 0px 0px
+}
+//blog
+.btltl{
+  padding: 10px 10px 10px 0px;
+  color: rgb(64, 70, 1);
+  font: 18px/100% Arial, Helvetica, sans-serif;
+}
+.bdt{
+  padding: 10px 10px 10px 0px;
+  color: rgb(64, 70, 1);
+  font: 18px/100% Arial, Helvetica, sans-serif;
+  overflow:hidden; width:20px;
+}
+.bpost{
+  padding: 10px 10px 10px 0px;
+  color: rgb(64, 70, 1);
+  font: 18px/100% Arial, Helvetica, sans-serif;
+}
+.pcntcmm{
+  padding: 10px 10px 10px 0px;
+  color: rgb(64, 70, 1);
+  font: 18px/100% Arial, Helvetica, sans-serif;
+}
+.busr{
+  padding: 10px 10px 10px 0px;
+  color: rgb(64, 70, 1);
+  font: 18px/100% Arial, Helvetica, sans-serif;
 }

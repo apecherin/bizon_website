@@ -1,24 +1,27 @@
 %p#notice= notice
 %img.rightavatblog{:alt => @blog.title, :src => @blog.avatar.url}/
 %span.btltl
-  Created at:
-  = @blog.created_at
-%p
-  %b Title:
   = @blog.title
-%p
-  %b Post:
+%br
+%span.bdt
+  = @blog.created_at.to_s(:my_datetime)
+%br
+%span.bpost
   = @blog.post
-%p
-  %b User:
+%br
+%span.busr
+  Post by:
   = "#{@blog.user.firstname} #{@blog.user.lastname}"
+%br
 .span8
   %a#vverh{:href => "#"} Up
   - if current_user
     %a.btn.btn-success{"data-toggle" => "modal", :href => "#newComment", :role => "button"} Add a new comment
+    %br
   - if @blog.comments.any?
-    %h3
+    %span.pcntcmm
       Comments (#{@blog.comments.count})
+    %br
     %ol.comments
       = render @comments
     = will_paginate @comments
