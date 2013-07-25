@@ -25,6 +25,8 @@
     <file path="/pages.js.coffee" changelist="cd41480b-ff5a-4b9f-8d07-f5d1dccb6581" time="1373997888903" ignored="false" />
     <file path="/_form.html.haml" changelist="cd41480b-ff5a-4b9f-8d07-f5d1dccb6581" time="1373894846300" ignored="false" />
     <file path="$PROJECT_DIR$/../saas-after/app/views/plans/index.html.erb" changelist="cd41480b-ff5a-4b9f-8d07-f5d1dccb6581" time="1374001124115" ignored="false" />
+    <file path="/production.rb" changelist="cd41480b-ff5a-4b9f-8d07-f5d1dccb6581" time="1374755911536" ignored="false" />
+    <file path="/database.yml" changelist="cd41480b-ff5a-4b9f-8d07-f5d1dccb6581" time="1374755942023" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/blogs/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="7" selection-start="701" selection-end="701" vertical-scroll-proportion="0.7972441">
+            <state line="28" column="7" selection-start="701" selection-end="701" vertical-scroll-proportion="-16.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="32" selection-start="921" selection-end="941" vertical-scroll-proportion="0.625">
               <folding />
             </state>
           </provider>
@@ -127,15 +138,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scaffolds.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -146,8 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/db/migrate/20130714220137_add_path_column_to_product.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130714220337_add_price_column_to_product.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/views/products/_form.html.haml" />
@@ -162,6 +162,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/comments/_comment.html.haml" />
         <option value="$PROJECT_DIR$/app/views/blogs/show.html.haml" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -296,6 +298,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bizonapps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bizon-apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -969,20 +989,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/blogs.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/blogs.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/arrow.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1074,9 +1080,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="30" selection-start="691" selection-end="691" vertical-scroll-proportion="0.5480769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/blogs/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="7" selection-start="701" selection-end="701" vertical-scroll-proportion="0.7972441">
+        <state line="28" column="7" selection-start="701" selection-end="701" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="32" selection-start="921" selection-end="941" vertical-scroll-proportion="0.625">
           <folding />
         </state>
       </provider>
