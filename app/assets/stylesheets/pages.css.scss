@@ -8,8 +8,18 @@
 html,
 body {
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  //background-color: rgb(255, 255, 255);
   /* The html and body elements cannot have any padding or margin. */
+  /*background: #f5f6f6; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIxJSIgc3RvcC1jb2xvcj0iI2RiZGNlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2I4YmFjNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2RkZGZlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWY2ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-8 */
 }
 
 /* Wrapper for page content to push down footer */
@@ -140,6 +150,45 @@ aside {
   }
 }
 
+.products{
+  .row-fluid {
+    .span9{
+      background-color: rgb(245, 245, 245);
+      margin-top: 10px;
+      margin-left: 5% !important;
+      padding: 10px 10px 10px 40px;
+      border-color: #e8e8e8;
+      border-style: double;
+      border-bottom-width: 1px;
+    }
+  }
+}
+
+.products{
+  .row-fluid {
+    .span2{
+      //background-color: rgb(245, 245, 245);
+      margin-top: 60px;
+      //padding: 10px 10px 10px 40px;
+      /*
+      border-color: #e8e8e8;
+      border-style: double;
+      border-bottom-width: 1px;
+      */
+    }
+  }
+}
+
+.row-fluid {
+  .span9{
+    .btltl{
+      padding: 10px 10px 10px 0px;
+      color: rgb(64, 70, 1);
+      font: 18px/100% Arial, Helvetica, sans-serif;
+    }
+  }
+}
+
 a#vverh {
   display: none;
   position: fixed;
@@ -202,15 +251,16 @@ a{
 }
 //blog
 .btltl{
-  padding: 10px 10px 10px 0px;
-  color: rgb(64, 70, 1);
-  font: 18px/100% Arial, Helvetica, sans-serif;
+  padding: 10px 10px 0px 0px;
+  color: rgb(18, 19, 12);
+  font: 23px/80% Arial, Helvetica, sans-serif;
 }
 .bdt{
-  padding: 10px 10px 10px 0px;
-  color: rgb(64, 70, 1);
-  font: 18px/100% Arial, Helvetica, sans-serif;
+  padding: 0px 60px 10px 0px;
+  color: rgb(18, 19, 12);
+  font: 15px/100% Arial, Helvetica, sans-serif;
   overflow:hidden; width:20px;
+  float: right;
 }
 .bpost{
   padding: 10px 10px 10px 0px;
@@ -223,7 +273,113 @@ a{
   font: 18px/100% Arial, Helvetica, sans-serif;
 }
 .busr{
-  padding: 10px 10px 10px 0px;
-  color: rgb(64, 70, 1);
+  color: rgb(18, 19, 12);
   font: 18px/100% Arial, Helvetica, sans-serif;
+  font-style: italic;
+  float: right;
+}
+.blog{
+  padding: 10px 10px 10px 10px;
+  margin: 10px 90px 10px 90px;
+  background-color: rgb(255, 255, 255);
+}
+.product{
+  padding: 10px 10px 10px 10px;
+  margin: 10px 90px 10px 90px;
+  background-color: rgb(255, 255, 255);
+}
+
+.price {
+  display: none;
+  margin: -10px 0px 0px 4px;
+  padding-top: 10px;
+  text-align:  center;
+  width: 80px;
+  height: 30px;
+  font: 18px/100% Arial, Helvetica, sans-serif;
+  font-style: italic;
+  background: #2f96b4;
+  color: #FFF
+}
+
+.stripe-payment {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  width: 423px;
+  margin: 30px 35%;
+  height: 236px;
+  background-color: #363739;
+  border: solid 1px #2f3032;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.20), rgba(0,0,0,0.12) 0px 0px 10px inset;
+  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.20), rgba(0,0,0,0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.20), rgba(0,0,0,0.12) 0px 0px 10px inset;
+}
+
+.sp-header{
+  height: 25px;
+  color: White;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#747577), to(#363739));
+  background-image: -moz-linear-gradient(#747577, #363739);
+  background-image: -webkit-linear-gradient(#747577, #363739);
+  background-image: -o-linear-gradient(#747577, #363739);
+}
+
+.sp-contents {
+  margin-left: 12px;
+  padding: 8px;
+  width: 381px;
+  height: 176px;
+  border: solid 1px #2f3032;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  background-color: #f1f1f1;
+}
+
+.ajax-typeahead{
+  width: 146px;
+  height: 28px !important;
+}
+
+.cvc{
+  width: 46px;
+}
+.card-number{
+  width: 143px;
+}
+.exp{
+  width: 210px;
+}
+.submit-pay{
+  float: right;
+  //margin: 30px 0 0 0;
+}
+.types-card{
+  background:url(types.png);
+  height: 18;
+  width: 255;
+  float: right;
+}
+.form-row-cn{
+  margin: 10px 0 0 0;
+}
+.form-row-cvc{
+  margin: 10px 0 0 0;
+}
+.form-row-exp{
+  margin: 10px 0 0 0;
 }

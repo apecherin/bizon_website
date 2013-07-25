@@ -1,0 +1,20 @@
+.product
+  %p#notice= notice
+  %img.rightavatblog{:alt => @product.title, :src => @product.avatar.url}
+  %span.btltl
+    = @product.title
+  %br
+  %br
+  %span.bdt
+    = @product.created_at.to_s(:my_datetime)
+  %br
+  %br
+  %span.bpost
+    = @product.desc
+  %br
+  .span
+    %a#vverh{:href => "#"} Up
+  - if this_is_admin?
+    = link_to 'Edit', edit_product_path(@product),:class=>"btn btn-warning"
+    \|
+  = link_to 'Back', products_path,:class=>"btn btn-inverse"

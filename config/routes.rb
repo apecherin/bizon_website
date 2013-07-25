@@ -6,6 +6,11 @@ Bizonapps::Application.routes.draw do
     end
   end
 
+  resources :products
+  resources :payments
+  #resources :products do
+  #end
+
   resources :comments, only: [:destroy] do
     collection do
       post 'addComment'

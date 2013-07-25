@@ -1,0 +1,31 @@
+.container-fluid
+  .products
+    .row-fluid
+      .span12
+        - if this_is_admin?
+          = link_to 'New Product', new_product_path, :class => "btn btn-primary"
+        %h2 Our products:
+        - @products.each do |product|
+          .span11
+            .span9
+              %a#vverh{:href => "#"} Up
+              %img.leftavatblog{ :alt => product.title, :src => product.avatar.small_thumb.url}
+              %span.btltl= product.title
+              %br
+              %span.bdt= product.created_at.to_s(:my_datetime)
+              %br
+              - tr_link = truncate(product.desc, :length => 350, :separator => ' ', :omission => '...');
+              %p
+                = tr_link
+                - if product.desc.to_s.length > 350
+                  = link_to 'read more', product
+              %p= link_to 'Show', product, :class => "btn btn-info"
+              - if this_is_admin?
+                %p= link_to "Edit", edit_product_path(product), :class => "btn btn-warning"
+                %p= link_to "Destroy",  product, :class => "btn btn-danger", :method => :delete, :data => { :confirm => 'Are you sure?' }
+            .span2
+              .buy-prod
+                %p= link_to 'Buy now', new_payment_path(:prod_id => product.id), :class => "btn btn-info"
+              .price
+                = product.price
+                $

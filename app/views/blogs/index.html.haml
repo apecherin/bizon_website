@@ -12,12 +12,11 @@
           %a#vverh{:href => "#"} Up
           %img.leftavatblog{ :alt => blog.title, :src => blog.avatar.small_thumb.url}
           %span.btltl= blog.title
-          %br
           %span.bdt= blog.created_at.to_s(:my_datetime)
           %br
           - tr_link = truncate(blog.post, :length => 350, :separator => ' ', :omission => '...');
           %p
-            = tr_link
+            = simple_format(tr_link)
             - if blog.post.to_s.length > 350
               = link_to 'read more', blog
           %span.busr

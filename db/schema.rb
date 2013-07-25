@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130512101113) do
+ActiveRecord::Schema.define(:version => 20130714220337) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(:version => 20130512101113) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "odesk_link"
+    t.string   "avatar"
+    t.text     "description"
+    t.string   "role"
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
@@ -37,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130512101113) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
+    t.string   "avatar",     :null => false
   end
 
   create_table "comments", :force => true do |t|
@@ -61,6 +68,16 @@ ActiveRecord::Schema.define(:version => 20130512101113) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "image"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "title"
+    t.text     "desc"
+    t.string   "avatar"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "path"
+    t.string   "price"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -95,6 +112,7 @@ ActiveRecord::Schema.define(:version => 20130512101113) do
     t.string   "avatar"
     t.text     "description"
     t.string   "role"
+    t.string   "customer"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,34 +1,38 @@
-%p#notice= notice
-%img.rightavatblog{:alt => @blog.title, :src => @blog.avatar.url}/
-%span.btltl
-  = @blog.title
-%br
-%span.bdt
-  = @blog.created_at.to_s(:my_datetime)
-%br
-%span.bpost
-  = @blog.post
-%br
-%span.busr
-  Post by:
-  = "#{@blog.user.firstname} #{@blog.user.lastname}"
-%br
-.span8
+.blog
+  %p#notice= notice
+  %img.rightavatblog{:alt => @blog.title, :src => @blog.avatar.url}/
+  %span.btltl
+    = @blog.title
+  %br
+  %br
+  %span.busr
+    = "#{@blog.user.firstname} #{@blog.user.lastname}"
+  %br
+  %span.bdt
+    = @blog.created_at.to_s(:my_datetime)
+  %br
+  %br
+  %span.bpost
+    = simple_format(@blog.post)
+  %br
+  - if this_is_admin?
+    = link_to 'Edit', edit_blog_path(@blog),:class=>"btn btn-warning"
+    \|
+  = link_to 'Back', blogs_path,:class=>"btn btn-inverse"
+  %br
   %a#vverh{:href => "#"} Up
   - if current_user
+    %br
     %a.btn.btn-success{"data-toggle" => "modal", :href => "#newComment", :role => "button"} Add a new comment
     %br
   - if @blog.comments.any?
+    %br
     %span.pcntcmm
       Comments (#{@blog.comments.count})
     %br
     %ol.comments
       = render @comments
     = will_paginate @comments
-- if this_is_admin?
-  = link_to 'Edit', edit_blog_path(@blog),:class=>"btn btn-warning"
-  \|
-= link_to 'Back', blogs_path,:class=>"btn btn-inverse"
 
 #newComment.modal.hide.fade{'aria-hidden' => 'true', 'aria-labelledby' => 'myModalLabel', :role => 'dialog', :tabindex => '-1'}
   .modal-header

@@ -3,7 +3,7 @@
     - if this_is_admin?
       %a.btn.btn-danger.fancybox{:href => "#deleteComment",  'data-toggle'=>"modal"} Delete
     %h6 #{@blog.user.firstname} #{@blog.user.lastname} said :
-    %span.content= comment.content
+    %span.content= simple_format(comment.content)
     %span.timestamp
       Posted #{time_ago_in_words(comment.created_at)} ago.
 #deleteComment.modal.hide.fade{'aria-hidden' => 'true', 'aria-labelledby' => 'myModalLabel', :role => 'dialog', :tabindex => '-1'}

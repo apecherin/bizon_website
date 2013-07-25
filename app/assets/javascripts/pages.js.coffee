@@ -72,8 +72,18 @@ team =
           $('#portfolios').append('<li><a href="' + portfolio.url + '" target="_blank">' + portfolio.name + '</a></li>')
         $('#myModal').modal('show')
 
+price =
+  init: ->
+    @price_look()
+
+  price_look: ->
+    $(".buy-prod").hover (->
+      $(this).next(".price").slideDown 110
+    ), ->
+      $(this).next(".price").slideUp 110
+
 $ ->
   index.init()
   portfolio.init()
   team.init()
-  console.log('1')
+  price.init()
