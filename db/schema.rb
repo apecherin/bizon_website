@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130714220337) do
+ActiveRecord::Schema.define(:version => 20130802220037) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -74,10 +74,18 @@ ActiveRecord::Schema.define(:version => 20130714220337) do
     t.string   "title"
     t.text     "desc"
     t.string   "avatar"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.string   "path"
     t.string   "price"
+    t.string   "attachfree_file_name"
+    t.string   "attachfree_content_type"
+    t.integer  "attachfree_file_size"
+    t.datetime "attachfree_updated_at"
+    t.string   "attachcomm_file_name"
+    t.string   "attachcomm_content_type"
+    t.integer  "attachcomm_file_size"
+    t.datetime "attachcomm_updated_at"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_filter :authenticate_user!
   def new
     @product = Product.find( params[:prod_id])
     respond_to do |format|

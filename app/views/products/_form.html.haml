@@ -11,6 +11,12 @@
     = image_tag(@product.avatar_url) if @product.avatar?
     = f.file_field :avatar
   .field
+    = f.label(:attachfree, 'Upload product(free version)')
+    = f.file_field(:attachfree)
+  .field
+    = f.label(:attachcomm, 'Upload product(commerce version)')
+    = f.file_field(:attachcomm)
+  .field
     = f.label :title
     = f.text_field :title
   .field

@@ -5,12 +5,18 @@
     = @product.title
   %br
   %br
+  .buy-prod
+    = link_to 'Buy now', new_payment_path(:prod_id => @product.id), :class => "btn btn-info"
+  .price
+    = @product.price
+    $
+  %br
+    %p= link_to "FREE version", @product.attachfree.url(), :class => "btn btn-info"
   %span.bdt
     = @product.created_at.to_s(:my_datetime)
   %br
-  %br
   %span.bpost
-    = @product.desc
+    = simple_format(@product.desc)
   %br
   .span
     %a#vverh{:href => "#"} Up

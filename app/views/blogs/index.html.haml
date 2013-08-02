@@ -17,13 +17,9 @@
           - tr_link = truncate(blog.post, :length => 350, :separator => ' ', :omission => '...');
           %p
             = simple_format(tr_link)
-            - if blog.post.to_s.length > 350
-              = link_to 'read more', blog
           %span.busr
             Author:
             = "#{blog.user.firstname} #{blog.user.lastname}"
-          %br
-          %span.pcntcmm= blog.comments.count
           %br
           %p= link_to 'Show', blog, :class => "btn btn-info"
           - if this_is_admin?

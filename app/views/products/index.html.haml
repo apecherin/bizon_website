@@ -17,8 +17,6 @@
               - tr_link = truncate(product.desc, :length => 350, :separator => ' ', :omission => '...');
               %p
                 = tr_link
-                - if product.desc.to_s.length > 350
-                  = link_to 'read more', product
               %p= link_to 'Show', product, :class => "btn btn-info"
               - if this_is_admin?
                 %p= link_to "Edit", edit_product_path(product), :class => "btn btn-warning"
@@ -29,3 +27,5 @@
               .price
                 = product.price
                 $
+              %br
+              %p= link_to "FREE version", product.attachfree.url(), :class => "btn btn-info"

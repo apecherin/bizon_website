@@ -40,3 +40,4 @@ gem 'jquery-rails'
 gem "tire"
 gem "devise"
 gem 'stripe'
+gem 'paperclip', '~> 3.0'

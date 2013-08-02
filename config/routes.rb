@@ -8,8 +8,6 @@ Bizonapps::Application.routes.draw do
 
   resources :products
   resources :payments
-  #resources :products do
-  #end
 
   resources :comments, only: [:destroy] do
     collection do
@@ -17,14 +15,6 @@ Bizonapps::Application.routes.draw do
       post 'deleteComment'
     end
   end
-
-  #resources :search do
-   # collection do
-    #  post 'addIndex'
-     # post 'autoComplete'
-    #end
-  #end
-
 
   devise_for :admins
   as :admin do
